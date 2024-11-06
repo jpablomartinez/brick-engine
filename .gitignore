@@ -1,0 +1,92 @@
+# Compiled binary files
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.ilk
+*.lib
+*.nupkg
+*.so
+*.dylib
+*.a
+*.o
+
+# Build output directories
+out/
+build/
+
+# IDE-specific files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# macOS-specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# MonoGame cache and settings files
+*.mgcb
+Content/bin/
+Content/obj/
+
+# Visual Studio Code
+.vscode/
+.history/
+
+# Rider IDE files
+.idea/
+*.sln.iml
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# NuGet packages
+*.nupkg
+packages/
+# If using the new `packages` directory (NuGet 4+)
+!packages/*.md
+
+# Resharper files
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Rider specific
+.idea/
+*.sln.iml
+.idea_modules/
+
+# Uncomment if needed for NuGet Packages folder in a Mono repository
+# **/packages/*
+
+# Ignore test results
+TestResult.xml
+TestResults/
+
+# JetBrains Rider
+.idea/
+
+# OS generated files
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+*.swp
+*.lock
+
+# Exclude compiled MonoGame Pipeline content
+Content/
