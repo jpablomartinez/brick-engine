@@ -6,15 +6,26 @@ using OpenTK.Windowing.Common;
 
 public class GraphicsManager : GameWindow
 {
-    public GraphicsManager(int width, int height, string title)
-        : base(GameWindowSettings.Default, new NativeWindowSettings() { Size = (width, height), Title = title })
+    public int Width { get; set; }
+    public int Height { get; set; }
+
+    public string WindowsTitle { get; set; }
+    public Color BackgroundColor {get;set;}
+
+
+    public GraphicsManager(int width, int height, string title, Color backgroundColor)
+        : base(GameWindowSettings.Default, new NativeWindowSettings() { ClientSize = (width, height), Title = title })
     {
+        Width = width;
+        Height = height;
+        WindowsTitle = title;
+        BackgroundColor = backgroundColor;
     }
 
     protected override void OnLoad()
     {
         base.OnLoad();
-        GL.ClearColor(0.1f, 0.2f, 0.3f, 1.0f); // Set background color
+        GL.ClearColor(BackgroundColor.Red, BackgroundColor.Green, BackgroundColor.Blue, BackgroundColor.Alpha);
     }
 
     protected override void OnRenderFrame(FrameEventArgs e)
