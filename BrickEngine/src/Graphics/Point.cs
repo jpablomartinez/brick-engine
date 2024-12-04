@@ -3,22 +3,23 @@
 /// Provides methods for initialization, string representation, equality comparison,
 /// and hash code generation based on the coordinates.
 /// </summary>
-public class Point {
+public class Point
+{
 
     /// <summary>
     /// a x coordinate point
     /// </summary>
-    public float X {get; set;}
+    public float X { get; set; }
 
     /// <summary>
     /// a y coordinate point
     /// </summary>
-    public float Y {get; set;}
+    public float Y { get; set; }
 
     /// <summary>
     /// a z coordinate point (in 2D default value is 0f)
     /// </summary>
-    public float Z {get; set;}
+    public float Z { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="Point"/> class with specified coordinates.
@@ -26,7 +27,8 @@ public class Point {
     /// <param name="x">The X coordinate of the point.</param>
     /// <param name="y">The Y coordinate of the point.</param>
     /// <param name="z">The Z coordinate of the point, default is 0.</param>
-    public Point(float x, float y, float z = 0f) {
+    public Point(float x, float y, float z = 0f)
+    {
         X = x;
         Y = y;
         Z = z;
@@ -50,9 +52,11 @@ public class Point {
     /// </returns>
     public override bool Equals(object? obj)
     {
-        if (obj is Point other){
+        if (obj is Point other)
+        {
             return other.X == X && other.Y == Y;
-        } return false;
+        }
+        return false;
     }
 
     /// <summary>
@@ -61,7 +65,8 @@ public class Point {
     /// <returns>
     /// An integer hash code representing the point.
     /// </returns>
-    public override int GetHashCode(){
+    public override int GetHashCode()
+    {
         return HashCode.Combine(X, Y, Z);
     }
 
