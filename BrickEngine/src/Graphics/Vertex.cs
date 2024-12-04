@@ -1,4 +1,5 @@
-public class Vertex {
+public class Vertex
+{
 
     /// <summary>
     /// a (x,y,z) point
@@ -15,7 +16,8 @@ public class Vertex {
     /// </summary>
     /// <param name="ps">The point representing the position of the vertex.</param>
     /// <param name="c">The color associated with the vertex.</param>
-    public Vertex(Point ps, Color c){        
+    public Vertex(Point ps, Color c)
+    {
         point = ps;
         color = c;
     }
@@ -24,9 +26,12 @@ public class Vertex {
     /// Returns the vertex data as a float array containing the X and Y coordinates,
     /// a default Z coordinate of 0, and the RGB color components.
     /// </summary>
-    public float[] getVertex(){
-        float[] vertex = {point.X, point.Y, 0f, color.Red, color.Green, color.Blue};
+    public float[] getVertex()
+    {
+        float[] vertex = { point.X, point.Y, 0f, color.Red, color.Green, color.Blue };
         return vertex;
     }
+
+
 
 }

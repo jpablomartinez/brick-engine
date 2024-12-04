@@ -1,15 +1,17 @@
 ﻿using System;
+using OpenTK.Windowing.Desktop;
 
-namespace BrickEngine{
+namespace BrickEngine
+{
 
-    class Program{
-        static void Main(string[] args){
-
-            //Color backgroundColor = Color.FromHexColor(0x020919);                        
-
-            using(var game = new GraphicsManager(800,600,"Brick Engine - Pong Game", Color.BrickColor)){
-                game.Run();
-            }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            NativeWindowSettings ns = NativeWindowSettings.Default;
+            ns.Title = "Brick Engine - Pong Game";
+            GraphicsManager graphicsManager = new GraphicsManager(800, 600, Color.BrickColor, ns);
+            graphicsManager.Run();
         }
     }
 
